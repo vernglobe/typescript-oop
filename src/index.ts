@@ -7,7 +7,7 @@ import { CDog } from "./animal/CDog";
 
 function main() {
   const dog = new CDog(); // Create a class instance/object.
-  dog.setCountryOfOrigin("Malaysia");
+  dog.setCountryOfOrigin("Afrika");
   dog.setName("Tony");
   dog.setTotal(100);
   dog.setColor("gray");
