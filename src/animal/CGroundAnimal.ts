@@ -3,16 +3,16 @@ import { IAnimal } from "./IAnimal";
 
 export class CGroundAnimal implements IAnimal {
   total?: number;         // public and is optional variable.
-  
-  color: string;  
-  name: string;           // default modifier is public
-  desc: string;           // Accessible by subclass only.   
-  
+  color: string;          // default modifier is public
+  name: string;           
+  desc: string;           
   #total: number;              // Not accessible outside the class same as private modifier.
-  private numberOfLeg: number; // Not accessible outside the class. compilation error if try to access after create the object
+  private numberOfLeg: number;  // Not accessible outside the class. compilation error if try to access after create the object
+
+  protected weigthInKg: number; // protected modifier accessible by subclass only.   
 
   setDesc = (desc: string): void => {
-    throw new Error("Method not implemented!");
+    this.desc = desc;  //prefix readonly desc: string will cause error `Cannot assign to 'desc' because it is a read-only property`
   };
 
   getDesc = ():string => {
@@ -50,4 +50,9 @@ export class CGroundAnimal implements IAnimal {
   getNumberOfLeg(): number {
     return this.numberOfLeg;
   }
+
+  getSound():string {
+    throw new Error("Method not implemented");
+  }
+
 }

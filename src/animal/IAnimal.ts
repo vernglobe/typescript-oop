@@ -8,7 +8,7 @@
 export interface IAnimal {
   name: string;  
   total?: number;
-  readonly desc: string;
+  readonly desc: string; //this prefix readonly has not effect at class that implements interface type
   color: string;
 
   setName: (name: string) => void;
