@@ -9,10 +9,7 @@
   "author": "vernglobe <vernglobe@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "tsify": "^5.0.4",
     "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "browserify": "^17.0.0",
-    "tsify": "^5.0.4"
   }
 }

@@ -34,7 +34,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CGroundAnimal = void 0;
 class CGroundAnimal {
     constructor() {
-        _CGroundAnimal_total.set(this, void 0); // Not accessible outside the class same as private
+        _CGroundAnimal_total.set(this, void 0); // Not accessible outside the class same as private modifier.
+        this.setDesc = (desc) => {
+            throw new Error("Method not implemented!");
+        };
+        this.getDesc = () => {
+            return this.desc;
+        };
         this.setName = (name) => {
             this.name = name;
         };
@@ -53,6 +59,12 @@ class CGroundAnimal {
     }
     getTotal() {
         return __classPrivateFieldGet(this, _CGroundAnimal_total, "f");
+    }
+    setNumberOfLeg(numberOfLeg) {
+        this.numberOfLeg = numberOfLeg;
+    }
+    getNumberOfLeg() {
+        return this.numberOfLeg;
     }
 }
 exports.CGroundAnimal = CGroundAnimal;
