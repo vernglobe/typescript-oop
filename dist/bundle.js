@@ -6,7 +6,7 @@ const CGroundAnimal_1 = require("./CGroundAnimal");
 class CCat extends CGroundAnimal_1.CGroundAnimal {
     constructor() {
         super(...arguments);
-        this.sound = "miao miao";
+        this.sound = "miao miao"; // Not accessible outside the class.
     }
     getSound() {
         return this.sound;
@@ -22,7 +22,7 @@ const CGroundAnimal_1 = require("./CGroundAnimal");
 class CDog extends CGroundAnimal_1.CGroundAnimal {
     constructor() {
         super(...arguments);
-        this.sound = "woof woof";
+        this.sound = "woof woof"; // without private modifier, this variable is publicly accessible.
         this.setCountryOfOrigin = (country) => {
             this.country = country;
         };
