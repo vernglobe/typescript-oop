@@ -3,10 +3,13 @@ import { IAnimal } from "./IAnimal";
 
 export class CGroundAnimal implements IAnimal {
   total?: number;         // public and is optional variable.
-  #total: number;         // Not accessible outside the class same as private
-  color: string;  // Not accessible outside the class. compilation error if try to access after create the object
-  name: string;           // default is public
-  desc: string;           // Accessible by subclass only.          
+  
+  color: string;  
+  name: string;           // default modifier is public
+  desc: string;           // Accessible by subclass only.   
+  
+  #total: number;              // Not accessible outside the class same as private modifier.
+  private numberOfLeg: number; // Not accessible outside the class. compilation error if try to access after create the object
 
   setName = (name: string): void => {
     this.name = name;
